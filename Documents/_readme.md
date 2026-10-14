@@ -1,0 +1,2 @@
+# Documents
+_Use this folder to contain documents surrounding this prototype. Images, user manual pdfs, certificates, background documents, etc. Include or refer to these documents from your main descriptions and instructions.
