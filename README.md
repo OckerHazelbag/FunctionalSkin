@@ -103,7 +103,7 @@ This project is released under CC0 1.0 Universal. You can modify and reuse it as
 
 ## How to cite
 
-unctionalSkin team (2026). FunctionalSkin: a bio-inspired passive-cooling façade panel. Major Innovation Project, MSc Bio Inspired Innovation, Utrecht University.
+FunctionalSkin team (2026). FunctionalSkin: a bio-inspired passive-cooling façade panel. Major Innovation Project, MSc Bio Inspired Innovation, Utrecht University.
 
 ## Acknowledgments
 
