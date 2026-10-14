@@ -6,12 +6,17 @@ The project continues earlier work by students of Utrecht University of Applied 
 
 ## Main features
 Three passive cooling strategies in one panel: convection (a 3D folded geometry with 8 cm cavities driving buoyancy-based "chimney" airflow, inspired by termite mounds), plus reflection and radiative cooling (inspired by the Saharan silver ant).
+
 Measured cooling: in a climate chamber (30 °C, 800 W/m² simulated sunlight) the inner back wall reached 64.0 °C unventilated. A flat coated panel brought it to 46.2 °C, our prototype to 39.2 °C, and the prototype with simulated wind (2–4 m/s) to 34.2 °C.
+
 Modular, low-tech prototype: 32 tiles of 15×15 cm in 5.5 mm plywood, CNC-milled, steam-folded to 135° and mounted on a 120×60 cm backboard.
+
 Sustainable materials: a life cycle assessment compared Douglas fir, plywood, thermally modified spruce and mycelium composites. Plywood is a prototyping material only; Douglas fir is the recommended final choice.
+
 Mycelium side project: Fomes inzengae blocks heat-pressed into a 3D shape (not reported before, to our knowledge), with data on pressing parameters, water uptake, contact angle, flexural strength and colour change.
 Beyond the lab: business model, IP analysis and implementation plan, plus a TRL assessment (timber panel TRL 4, mycelium TRL 3).
-Repository structure
+
+## Repository structure
 
 The most important file is this README. Detailed build instructions and results are in the subfolders, each with its own _readme.md.
 
