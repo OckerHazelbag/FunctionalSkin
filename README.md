@@ -1,79 +1,100 @@
-# Open Hardware Documentation Template
+FunctionalSkin: a bio-inspired passive-cooling façade panel
 
-This repository template presents a structure for describing relatively small hardware projects.  
-The main goal of this template is to simplify starting such a repository at an early stage of the project and motivate team members to regularly update their documents in a structured way. 
-To keep it agile, filling in the necessary information for the first version repository should not take more than 10 minutes.
+Rising global temperatures make urban heat stress an increasing problem, and buildings are part of it: façades and roofs absorb solar heat during the day and release it at night (the Urban Heat Island effect). FunctionalSkin is a Major Innovation Project (MSc Bio Inspired Innovation, Utrecht University, supervised by Han Wösten) that investigates a façade cladding panel which passively cools a building and its immediate surroundings, without energy input, using sustainable materials (wood and mycelium).
 
-[How to use Markdown, GitHubs formatting language](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github)
+The project continues earlier work by students of Utrecht University of Applied Sciences (Boer et al., 2025) and the TU/e VirtuE project (Pujadas-Gispert et al., 2020). We added a radiative cooling coating to their convective, faceted panel, built and tested a new prototype, and explored heat-pressed mycelium composites as a future material. This repository collects everything we learned so that others can reuse, repeat or improve it.
 
-_Tips on how to use the template are put in italic. Remove these as soon as they are irrelevant._
+Main features
+Three passive cooling strategies in one panel: convection (a 3D folded geometry with 8 cm cavities driving buoyancy-based "chimney" airflow, inspired by termite mounds), plus reflection and radiative cooling (inspired by the Saharan silver ant).
+Measured cooling: in a climate chamber (30 °C, 800 W/m² simulated sunlight) the inner back wall reached 64.0 °C unventilated. A flat coated panel brought it to 46.2 °C, our prototype to 39.2 °C, and the prototype with simulated wind (2–4 m/s) to 34.2 °C.
+Modular, low-tech prototype: 32 tiles of 15×15 cm in 5.5 mm plywood, CNC-milled, steam-folded to 135° and mounted on a 120×60 cm backboard.
+Sustainable materials: a life cycle assessment compared Douglas fir, plywood, thermally modified spruce and mycelium composites. Plywood is a prototyping material only; Douglas fir is the recommended final choice.
+Mycelium side project: Fomes inzengae blocks heat-pressed into a 3D shape (not reported before, to our knowledge), with data on pressing parameters, water uptake, contact angle, flexural strength and colour change.
+Beyond the lab: business model, IP analysis and implementation plan, plus a TRL assessment (timber panel TRL 4, mycelium TRL 3).
+Repository structure
 
-_This introduction paragraph, right under the title, should explain the context of the project as well as why has it been initiated._
+The most important file is this README. Detailed build instructions and results are in the subfolders, each with its own _readme.md.
 
-## Main features
-_This subsection is a very brief introduction to the context and key features of your project that could be interesting for a user in search of a solution_
+Hardware: everything needed to build the prototypes.
+Fusion 360 models and CNC toolpaths/G-code for the wooden tiles
+Aluminium mould for heat-pressing mycelium
+3D-printed assembly jig
+Bill of materials and step-by-step build instructions for the plywood panel, the backboard and the mycelium tiles
+Documents: general documents.
+Final report
+Appendices: cooling mechanisms, material selection, design selection, LCA, business model, IP analysis, implementation plan
+Expert meeting summaries and literature
+Results: the prototypes in action and the experimental data.
+Rectangular shaft experiments (8 configurations)
+Climate chamber experiments on the prototype
+Mycelium tests (white value, contact angle, water absorption, flexural strength)
+Software: the R scripts used to merge, resample (10 s grid), phase-segment and analyse the sensor data, and the Fusion 360 CAM setup that generated the G-code.
+Build instructions
 
-The most important file in the repository is the README.md in the root folder of the reposity. In this main README try to present only the main information for the viewer to get started. 
-Detailed updates or build instructions are better suited for the subfolders such as `./Hardware` or `./Results`.
+Suggested order for browsing and building:
 
-Next to the README file, a basic folder structure is presented in this repository. 
-Each subfolder contains a `_readme.md` file that explains the conventions and purpose of that folder for the (future) collaborators to keep it tidy.
+Documents → final report (Part A): read the design requirements, material choice and design development to understand why the panel looks the way it does.
+Hardware → plywood panel:
+Mill the tiles from 5.5 mm plywood with the three toolpaths: 90° V-bit (mounting angle), flat bit (contour), 45° V-bit (fold groove, leaving about 1 mm of material so the outer veneer stays intact). Spindle speed is 26,000 rpm for the V-bits and 32,000 rpm for the flat bit.
+Saw a 5 mm strip off each tile at the 45° angle so the tiles connect seamlessly.
+Moisten the groove and steam it for about 2 minutes, fold to 135°, hold in the 3D-printed jig and glue with polyurethane construction adhesive (clamp 4 hours).
+Build the backboard from 48×22 mm spruce battens (5 lengthwise, 9 across, 120×60 cm).
+Glue and nail the tiles (two inverse versions, 16 of each) to the backboard, add 45° slats between inverse tiles and triangular side pieces, and fill seams with acrylic sealant.
+Paint the outside facets and sides with three layers of radiative cooling paint (CryoPaint®), drying 24 h between layers. Leave the cavity side uncoated.
+Hardware → mycelium tiles: grow, dry and heat-press the blocks as described in report part B.3 (115 kN, 150 or 190 °C, 5 or 20 min).
+Results: repeat the shaft and climate chamber experiments and compare against our data.
 
-This template is adjusted to the typical needs of a hardware project made for research or education. 
+Tips from our build:
 
-The purpose of each subfolder is explained below:
-+ [Hardware](Hardware/_readme.md): Contains all the information related to the hardware construction part of the prototype. Build instructions, (binary) design files and components. Use subfolders for more complex assemblies.
-+ [Documents](Documents/_readme.md): Contains all general documents surrounding the project: images, background information, literature sources, hazard documents.
-+ [Results](Results/_readme.md): Show your prototype in action, if possible including experimental results.
-+ [Software](Software/_readme.md): For hardware projects that have an operating software or firmware.
+Test heat transfer in a simplified shaft before the complex shape.
+Prototype the tile joints in PLA first.
+Plan for more than a full day of labour per 120×60 cm panel.
+Outcomes
+A plywood prototype panel that lowers the inner back-wall temperature by up to 24.8 °C under natural convection (almost 30 °C with wind) compared to an unventilated wall in a 30 °C climate chamber.
+A 7.0 °C improvement over a flat panel with the same coating, showing the effect of the 3D geometry.
+Evidence from the shaft experiments that a deeper cavity (16 cm vs 8 cm) and a thicker cladding lower the back-wall temperature further.
+A life cycle assessment comparing wood types and mycelium composites, with the lifespan mycelium would need to match Douglas fir (28–42 years).
+A proof of concept for heat-pressing cubic mycelium blocks into a 3D shape, with data on pressing parameters and material properties.
+A business model, IP analysis, implementation plan and TRL roadmap.
 
-## Build instructions
-_Guide the reader with the order of browsing your project repository for an optimum building experience_
- 
-When you want to start a new repository, it is better that you copy this repository to your project repository and start by changing all the description.
-All instructions and (sub)headers are suggestions. You can change the style, order, or composition as you see necessary. 
+Lessons learned and next steps:
 
+Narrow the scope early. Experts repeatedly advised focusing on one question.
+Treat bio-inspiration critically. The biological models mostly inspired rather than dictated the design.
+Test outdoors and over the seasons.
+Use larger tiles (e.g. 30×30 cm) so that solid Douglas fir can replace plywood.
+Simplify the geometry, and press into a mould instead of milling and steaming to scale up.
+Grow mycelium directly in 3D shapes and develop a bio-based coating.
+Address fire safety, as the chimney structure could spread fire.
+Team
 
-## Outcomes
-_Here you can list the outcomes of the project that you would like to hightlight. It does not need to be an exhaustive list_
+Project initiator: [to be filled in: name and GitHub handle]
 
-We will list some best practices and good examples from projects that have used this template for their documentation.
+Supervisor: Han Wösten
 
-## Team
-_Even though platforms such as github show a list of user accounts for contributors for a project or repository, the past contributors or external collaborators also deserve a place here_
+Contributors: [to be filled in: list of team members with GitHub handles]
 
-+ Project initiator: Sanli Faez @sanlifaez
-+ Contributors:
-	+ _add a list of main contributors_
+External experts who advised us: Joris Remmers (TU Eindhoven), Peter Oei, Willem Böttger (NPSP), Pieter Kooijman and Nico van Hijningen (Lili's Proto Lab), Jordi Pelkmans (Utrecht University), Steve Szell, Fran Ortega Exposito (Avans Hogeschool / MNEXT), Naud van der Padt (Leafy), Maud Kerstholt (Netherlands Patent Office) and Arne Hendriks.
 
+Get involved
 
-## Get involved
-_Especially for open source projects, it is beneficial to motivate potential users of the project to contribute back or share their feedback. Make it easy for them._
+We welcome feedback, questions and improvements.
 
-Comments and suggestions on this folder structure are always welcome. Please create an issue to share your feedback or question, or if you prefer send a pull request. 
+Where to start: read the final report in Documents, then follow the build instructions above.
+Issues: open an issue for questions, bugs in the documentation or suggestions. Please describe what you tried, the materials and settings you used, and what you observed.
+Pull requests: send a pull request with fixes, new test data or documented design variations.
+Direct contact: [to be filled in: team or supervisor email]
+License
 
-Better structured projects can explain a number of options for contributors such as: 
-+ (where to start)
-+ (issue template)
-+ (direct contact)
-+ (pull requests)
+This project is released under CC0 1.0 Universal. You can modify and reuse it as you like. The project team appreciates your suggestions or examples for enhancing the repository.
 
-## License
-_After the README, A LICENSE is the most important file in the project documentation. Without a license, there is too much uncertainty to try building anything on top of the original project._
+How to cite
 
-This project is released under CC0 1.0 Universal. 
-You can modify an reuse as you like.
-The project team appreciates your suggestions or examples for enhancing the repository, but your consistent documentation of your project is the best gift to the world. Hopefully, this template could make that a bit easier for you. 
+[to be filled in, for example:] FunctionalSkin team (2026). FunctionalSkin: a bio-inspired passive-cooling façade panel. Major Innovation Project, MSc Bio Inspired Innovation, Utrecht University. [repository URL]
 
-### (How to cite:)
-_Additionally, you can specify how others can cite your project._
+Acknowledgments and funding
 
-## (Funding)
-_Be kind to your funders and mention their support visibly and consistently. They also need to show their resources are wisely spent._
-
-This template can be copied free of charge. 
-
-<div style="display: flex; justify-content: space-between;">
+We thank Utrecht University of Applied Sciences (including the Applied Sciences climate chamber), the Utrecht University fungal lab and Lili's Proto Lab for access to their facilities and expertise. [Funding: to be filled in if applicable.]
   <img src="./Documents/Images/lpl_sharing.jpg" alt="lpl sharing" style="width: 30%;"/>
   <figcaption>Figure: LPL shop front with current and future letters<figcaption>
 </div>
