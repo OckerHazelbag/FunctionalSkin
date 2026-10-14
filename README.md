@@ -1,6 +1,8 @@
 # FunctionalSkin: a bio-inspired passive-cooling façade panel
 
-Rising global temperatures make urban heat stress an increasing problem, and buildings are part of it: façades and roofs absorb solar heat during the day and release it at night (the Urban Heat Island effect). FunctionalSkin is a Major Innovation Project (MSc Bio Inspired Innovation, Utrecht University, supervised by Han Wösten) that investigates a façade cladding panel which passively cools a building and its immediate surroundings, without energy input, using sustainable materials (wood and mycelium).
+Rising global temperatures make urban heat stress an increasing problem, and buildings are part of it: façades and roofs absorb solar heat during the day and release it at night (the Urban Heat Island effect). 
+
+FunctionalSkin is a Major Innovation Project (MSc Bio Inspired Innovation, Utrecht University, supervised by Han Wösten) that investigates a façade cladding panel which passively cools a building and its immediate surroundings, without energy input, using sustainable materials (wood and mycelium).
 
 The project continues earlier work by students of Utrecht University of Applied Sciences (Boer et al., 2025) and the TU/e VirtuE project (Pujadas-Gispert et al., 2020). We added a radiative cooling coating to their convective, faceted panel, built and tested a new prototype, and explored heat-pressed mycelium composites as a future material. This repository collects everything we learned so that others can reuse, repeat or improve it.
 
