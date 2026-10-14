@@ -1,10 +1,10 @@
-FunctionalSkin: a bio-inspired passive-cooling façade panel
+# FunctionalSkin: a bio-inspired passive-cooling façade panel
 
 Rising global temperatures make urban heat stress an increasing problem, and buildings are part of it: façades and roofs absorb solar heat during the day and release it at night (the Urban Heat Island effect). FunctionalSkin is a Major Innovation Project (MSc Bio Inspired Innovation, Utrecht University, supervised by Han Wösten) that investigates a façade cladding panel which passively cools a building and its immediate surroundings, without energy input, using sustainable materials (wood and mycelium).
 
 The project continues earlier work by students of Utrecht University of Applied Sciences (Boer et al., 2025) and the TU/e VirtuE project (Pujadas-Gispert et al., 2020). We added a radiative cooling coating to their convective, faceted panel, built and tested a new prototype, and explored heat-pressed mycelium composites as a future material. This repository collects everything we learned so that others can reuse, repeat or improve it.
 
-Main features
+## Main features
 Three passive cooling strategies in one panel: convection (a 3D folded geometry with 8 cm cavities driving buoyancy-based "chimney" airflow, inspired by termite mounds), plus reflection and radiative cooling (inspired by the Saharan silver ant).
 Measured cooling: in a climate chamber (30 °C, 800 W/m² simulated sunlight) the inner back wall reached 64.0 °C unventilated. A flat coated panel brought it to 46.2 °C, our prototype to 39.2 °C, and the prototype with simulated wind (2–4 m/s) to 34.2 °C.
 Modular, low-tech prototype: 32 tiles of 15×15 cm in 5.5 mm plywood, CNC-milled, steam-folded to 135° and mounted on a 120×60 cm backboard.
@@ -29,7 +29,8 @@ Rectangular shaft experiments (8 configurations)
 Climate chamber experiments on the prototype
 Mycelium tests (white value, contact angle, water absorption, flexural strength)
 Software: the R scripts used to merge, resample (10 s grid), phase-segment and analyse the sensor data, and the Fusion 360 CAM setup that generated the G-code.
-Build instructions
+
+## Build instructions
 
 Suggested order for browsing and building:
 
@@ -44,7 +45,7 @@ Paint the outside facets and sides with three layers of radiative cooling paint 
 Hardware → mycelium tiles: grow, dry and heat-press the blocks as described in report part B.3 (115 kN, 150 or 190 °C, 5 or 20 min).
 Results: repeat the shaft and climate chamber experiments and compare against our data.
 
-Tips from our build:
+## Tips from our build:
 
 Test heat transfer in a simplified shaft before the complex shape.
 Prototype the tile joints in PLA first.
@@ -57,7 +58,7 @@ A life cycle assessment comparing wood types and mycelium composites, with the l
 A proof of concept for heat-pressing cubic mycelium blocks into a 3D shape, with data on pressing parameters and material properties.
 A business model, IP analysis, implementation plan and TRL roadmap.
 
-Lessons learned and next steps:
+## Lessons learned and next steps:
 
 Narrow the scope early. Experts repeatedly advised focusing on one question.
 Treat bio-inspiration critically. The biological models mostly inspired rather than dictated the design.
@@ -68,15 +69,17 @@ Grow mycelium directly in 3D shapes and develop a bio-based coating.
 Address fire safety, as the chimney structure could spread fire.
 Team
 
-Project initiator: [to be filled in: name and GitHub handle]
+## Team
 
-Supervisor: Han Wösten
+Project case Owner: Jaco Appelman
 
-Contributors: [to be filled in: list of team members with GitHub handles]
+Supervisor: Han Wösten & Pauline Krijgsheld
+
+Contributors: Alexandra Cooke-Kasyanto, Felipe Krebs, Ruben Langendoen, Jochem ten Pas @jochemtenpas , Ocker Hazelbag @ockerhazelbag
 
 External experts who advised us: Joris Remmers (TU Eindhoven), Peter Oei, Willem Böttger (NPSP), Pieter Kooijman and Nico van Hijningen (Lili's Proto Lab), Jordi Pelkmans (Utrecht University), Steve Szell, Fran Ortega Exposito (Avans Hogeschool / MNEXT), Naud van der Padt (Leafy), Maud Kerstholt (Netherlands Patent Office) and Arne Hendriks.
 
-Get involved
+## Get involved
 
 We welcome feedback, questions and improvements.
 
@@ -88,11 +91,11 @@ License
 
 This project is released under CC0 1.0 Universal. You can modify and reuse it as you like. The project team appreciates your suggestions or examples for enhancing the repository.
 
-How to cite
+## How to cite
 
 [to be filled in, for example:] FunctionalSkin team (2026). FunctionalSkin: a bio-inspired passive-cooling façade panel. Major Innovation Project, MSc Bio Inspired Innovation, Utrecht University. [repository URL]
 
-Acknowledgments and funding
+## Acknowledgments and funding
 
 We thank Utrecht University of Applied Sciences (including the Applied Sciences climate chamber), the Utrecht University fungal lab and Lili's Proto Lab for access to their facilities and expertise. [Funding: to be filled in if applicable.]
   <img src="./Documents/Images/lpl_sharing.jpg" alt="lpl sharing" style="width: 30%;"/>
