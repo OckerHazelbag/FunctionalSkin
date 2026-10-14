@@ -15,27 +15,27 @@ Repository structure
 
 The most important file is this README. Detailed build instructions and results are in the subfolders, each with its own _readme.md.
 
-Hardware: everything needed to build the prototypes.
-Fusion 360 models and CNC toolpaths/G-code for the wooden tiles
-Aluminium mould for heat-pressing mycelium
-3D-printed assembly jig
-Bill of materials and step-by-step build instructions for the plywood panel, the backboard and the mycelium tiles
-Documents: general documents.
-Final report
-Appendices: cooling mechanisms, material selection, design selection, LCA, business model, IP analysis, implementation plan
-Expert meeting summaries and literature
-Results: the prototypes in action and the experimental data.
-Rectangular shaft experiments (8 configurations)
-Climate chamber experiments on the prototype
-Mycelium tests (white value, contact angle, water absorption, flexural strength)
-Software: the R scripts used to merge, resample (10 s grid), phase-segment and analyse the sensor data, and the Fusion 360 CAM setup that generated the G-code.
++ Hardware: everything needed to build the prototypes.
+++ Fusion 360 models and CNC toolpaths/G-code for the wooden tiles
+++ Aluminium mould for heat-pressing mycelium
+++ 3D-printed assembly jig
+++ Bill of materials and step-by-step build instructions for the plywood panel, the backboard and the mycelium tiles
++ Documents: general documents.
+++ Final report
+++ Appendices: cooling mechanisms, material selection, design selection, LCA, business model, IP analysis, implementation plan
+++ Expert meeting summaries and literature
+++ Results: the prototypes in action and the experimental data.
+++ Rectangular shaft experiments (8 configurations)
+++ Climate chamber experiments on the prototype
+++ Mycelium tests (white value, contact angle, water absorption, flexural strength)
++ Software: the R scripts used to merge, resample (10 s grid), phase-segment and analyse the sensor data, and the Fusion 360 CAM setup that generated the G-code.
 
 ## Build instructions
 
 Suggested order for browsing and building:
 
-Documents → final report (Part A): read the design requirements, material choice and design development to understand why the panel looks the way it does.
-Hardware → plywood panel:
++ Documents → final report (Part A): read the design requirements, material choice and design development to understand why the panel looks the way it does.
++ Hardware → plywood panel:
 Mill the tiles from 5.5 mm plywood with the three toolpaths: 90° V-bit (mounting angle), flat bit (contour), 45° V-bit (fold groove, leaving about 1 mm of material so the outer veneer stays intact). Spindle speed is 26,000 rpm for the V-bits and 32,000 rpm for the flat bit.
 Saw a 5 mm strip off each tile at the 45° angle so the tiles connect seamlessly.
 Moisten the groove and steam it for about 2 minutes, fold to 135°, hold in the 3D-printed jig and glue with polyurethane construction adhesive (clamp 4 hours).
