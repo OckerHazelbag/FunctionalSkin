@@ -88,8 +88,11 @@ External experts who advised us: Joris Remmers (TU Eindhoven), Peter Oei, Willem
 We welcome feedback, questions and improvements.
 
 Where to start: read the final report in Documents, then follow the build instructions above.
+
 Issues: open an issue for questions, bugs in the documentation or suggestions. Please describe what you tried, the materials and settings you used, and what you observed.
+
 Pull requests: send a pull request with fixes, new test data or documented design variations.
+
 Direct contact: J.H.Appelman@uu.nl
 
 ## License
