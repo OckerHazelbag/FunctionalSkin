@@ -5,7 +5,7 @@ Rising global temperatures make urban heat stress an increasing problem, and bui
 The project continues earlier work by students of Utrecht University of Applied Sciences (Boer et al., 2025) and the TU/e VirtuE project (Pujadas-Gispert et al., 2020). We added a radiative cooling coating to their convective, faceted panel, built and tested a new prototype, and explored heat-pressed mycelium composites as a future material. This repository collects everything we learned so that others can reuse, repeat or improve it.
 
 ## Main features
-Three passive cooling strategies in one panel: convection (a 3D folded geometry with 8 cm cavities driving buoyancy-based "chimney" airflow, inspired by termite mounds), plus reflection and radiative cooling (inspired by the Saharan silver ant).
+Three passive cooling strategies in one panel: convection (a 3D folded geometry with 8 cm cavities driving buoyancy-based "chimney" airflow), plus reflection and radiative cooling.
 
 Measured cooling: in a climate chamber (30 °C, 800 W/m² simulated sunlight) the inner back wall reached 64.0 °C unventilated. A flat coated panel brought it to 46.2 °C, our prototype to 39.2 °C, and the prototype with simulated wind (2–4 m/s) to 34.2 °C.
 
