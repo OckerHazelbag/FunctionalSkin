@@ -51,7 +51,7 @@ Suggested order for browsing and building:
 + Prototype the tile joints in PLA first.
 + Plan for more than a full day of labour per 120×60 cm panel.
 
-Outcomes
+## Outcomes
 + A plywood prototype panel that lowers the inner back-wall temperature by up to 24.8 °C under natural convection (almost 30 °C with wind) compared to an unventilated wall in a 30 °C climate chamber.
 + A 7.0 °C improvement over a flat panel with the same coating, showing the effect of the 3D geometry.
 + Evidence from the shaft experiments that a deeper cavity (16 cm vs 8 cm) and a thicker cladding lower the back-wall temperature further.
@@ -59,7 +59,7 @@ Outcomes
 + A proof of concept for heat-pressing cubic mycelium blocks into a 3D shape, with data on pressing parameters and material properties.
 + A business model, IP analysis, implementation plan and TRL roadmap.
 
-## next steps:
+## Next steps:
 
 + Test outdoors and over the seasons.
 + Use larger tiles (e.g. 30×30 cm) so that solid Douglas fir can replace plywood.
