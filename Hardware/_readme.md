@@ -85,7 +85,7 @@ A small panel (about 30 × 30 cm, 3 × 3 tiles) was assembled from mycelium comp
 
 1. **Make the aluminium mould:**
    1. Open the mould model in Fusion 360 (link in the design files table). It consists of a flat square mould plus 3D inserts (a positive and a negative part, each 100 × 100 mm) with a wavy shape. The wide wave angle lets a standard cubic block be pressed without growing it in a shaped mould.
-   2. Generate the toolpaths in Fusion 360 and post them to G-code for your CNC. Machine: [fill in]. Bits: [fill in]. Spindle speed and feed rate: [fill in]. Cutting depth per pass: [fill in]. Coolant or lubrication: [fill in].
+   2. Generate the toolpaths in Fusion 360 and post them to G-code for your CNC. Machine: CNC-Step High-Z S720T (open-source CNC router), Bits: Flat-top milling bit with three cutting edges. Spindle speed and feed rate: [fill in]. Cutting depth per pass: [fill in].
    3. Mill the positive and negative inserts from aluminium (grade and thickness: [fill in]).
    4. Check that the two inserts fit together, and that they fit in the flat mould and the heat press.
 2. **Grow:** *Fomes inzengae* on hemp shives in 10 × 10 × 3 cm acrylic moulds, 13 days at 30 °C. Remove from the mould and grow a skin for 7 days, then air dry for about 2.5 weeks.
