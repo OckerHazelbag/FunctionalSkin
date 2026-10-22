@@ -1,0 +1,147 @@
+#include <Adafruit_Sensor.h>
+#include <Adafruit_TMP117.h>
+#include <Adafruit_SHT4x.h>  // Bibliotheek voor de SHT45 sensoren
+#include <Wire.h>
+#include <SPI.h>
+#include <SD.h>
+
+#define TCAADDR 0x70
+
+// De Chip Select (CS) pin voor de SD-kaart op het data logger shield. 
+const int chipSelect = 10; 
+
+// TMP117 Objecten
+Adafruit_TMP117 tmp1;
+Adafruit_TMP117 tmp2;
+Adafruit_TMP117 tmp3;
+
+// SHT45 Objecten
+Adafruit_SHT4x sht1;
+Adafruit_SHT4x sht2;
+Adafruit_SHT4x sht3;
+
+void tcaSelect(uint8_t channel) {
+  if (channel > 7) return;
+
+  Wire.beginTransmission(TCAADDR);
+  Wire.write(1 << channel);
+  Wire.endTransmission();
+}
+
+void setup(void) {
+  Serial.begin(115200);
+  while (!Serial) delay(10);
+
+  Wire.begin();
+  Serial.println("Adafruit TMP117 & SHT45 test via TCA9548A & SD Datalogger");
+
+  // --- SD Kaart Setup ---
+  Serial.print("Initialiseren van SD-kaart...");
+  pinMode(10, OUTPUT);
+  if (!SD.begin(chipSelect)) {
+    Serial.println(" SD-kaart initialisatie mislukt! Controleer de kaart en de CS pin.");
+    while (1) delay(10); 
+  }
+  Serial.println(" SD-kaart succesvol geïnitialiseerd.");
+
+  // Maak een CSV bestand aan en schrijf de nieuwe kolomnamen (7 kolommen in totaal incl. tijd)
+  File dataFile = SD.open("templog.csv", FILE_WRITE);
+  if (dataFile) {
+    dataFile.println("Tijd_ms,TMP1_C,TMP2_C,TMP3_C,SHT1_C,SHT2_C,SHT3_C"); // Header rij
+    dataFile.close();
+    Serial.println("Bestand templog.csv geopened en header geschreven.");
+  } else {
+    Serial.println("Fout bij het openen van templog.csv");
+  }
+
+  // --- TMP117 Sensoren Setup ---
+  tcaSelect(0); // TMP1 op kanaal 0  
+  if (!tmp1.begin()) { Serial.println("Failed to find TMP1"); while (1) delay(10); }
+  Serial.println("TMP117-1 Found!");
+ 
+  tcaSelect(1); // TMP2 op kanaal 1  
+  if (!tmp2.begin()) { Serial.println("Failed to find TMP2"); while (1) delay(10); }
+  Serial.println("TMP117-2 Found!");
+  
+  tcaSelect(2); // TMP3 op kanaal 2  
+  if (!tmp3.begin()) { Serial.println("Failed to find TMP3"); while (1) delay(10); }
+  Serial.println("TMP117-3 Found!");
+
+  // --- SHT45 Sensoren Setup ---
+  tcaSelect(3); // SHT1 op kanaal 3
+  if (!sht1.begin()) { Serial.println("Failed to find SHT1"); while (1) delay(10); }
+  Serial.println("SHT45-1 Found!");
+
+  tcaSelect(4); // SHT2 op kanaal 4
+  if (!sht2.begin()) { Serial.println("Failed to find SHT2"); while (1) delay(10); }
+  Serial.println("SHT45-2 Found!");
+
+  tcaSelect(5); // SHT3 op kanaal 5
+  if (!sht3.begin()) { Serial.println("Failed to find SHT3"); while (1) delay(10); }
+  Serial.println("SHT45-3 Found!");
+}
+
+void loop() {
+  // Variabelen voor TMP117 events
+  sensors_event_t tmp_event;
+  
+  // Variabelen voor SHT45 events (deze sensor geeft temperatuur én luchtvochtigheid)
+  sensors_event_t humidity_event;
+  sensors_event_t sht_temp_event;
+
+  float tmp1_val, tmp2_val, tmp3_val;
+  float sht1_val, sht2_val, sht3_val;
+
+  // 1. Lees TMP117 sensoren (Kanalen 0, 1, 2)
+  tcaSelect(0);
+  while (!tmp1.dataReady()) delay(10);
+  tmp1.getEvent(&tmp_event);
+  tmp1_val = tmp_event.temperature;
+
+  tcaSelect(1);
+  while (!tmp2.dataReady()) delay(10);
+  tmp2.getEvent(&tmp_event);
+  tmp2_val = tmp_event.temperature;
+
+  tcaSelect(2);
+  while (!tmp3.dataReady()) delay(10);
+  tmp3.getEvent(&tmp_event);
+  tmp3_val = tmp_event.temperature;
+
+  // 2. Lees SHT45 sensoren (Kanalen 3, 4, 5)
+  tcaSelect(3);
+  sht1.getEvent(&humidity_event, &sht_temp_event);
+  sht1_val = sht_temp_event.temperature;
+
+  tcaSelect(4);
+  sht2.getEvent(&humidity_event, &sht_temp_event);
+  sht2_val = sht_temp_event.temperature;
+
+  tcaSelect(5);
+  sht3.getEvent(&humidity_event, &sht_temp_event);
+  sht3_val = sht_temp_event.temperature;
+
+  // 3. Bouw de CSV string met alle 6 de sensoren
+  String dataString = String(millis()) + "," + 
+                      String(tmp1_val, 2) + "," + 
+                      String(tmp2_val, 2) + "," + 
+                      String(tmp3_val, 2) + "," + 
+                      String(sht1_val, 2) + "," + 
+                      String(sht2_val, 2) + "," + 
+                      String(sht3_val, 2);
+
+  // 4. Print naar de Serial Monitor
+  Serial.println(dataString);
+
+  // 5. Schrijf naar de SD kaart
+  File dataFile = SD.open("templog.csv", FILE_WRITE);
+  if (dataFile) {
+    dataFile.println(dataString);
+    dataFile.close(); 
+  } else {
+    Serial.println("Fout bij het openen van templog.csv tijdens schrijven");
+  }
+
+  // Wacht 1 seconde voor de volgende meting
+  delay(2000); 
+}
