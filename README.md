@@ -107,7 +107,7 @@ FunctionalSkin team (2026). FunctionalSkin: a bio-inspired passive-cooling faça
 
 ## Acknowledgments
 
-We thank Lili's Proto Lab, the Utrecht University fungal lab and Utrecht University of Applied Sciences (including the Applied Sciences climate chamber), for access to their facilities and expertise.
+We thank Lili's Proto Lab, the Utrecht University fungal lab and Utrecht University of Applied Sciences (Lectoraat Nieuwe Energie in de Stad), for access to their facilities and expertise.
 
 
   <img src="./Documents/Images/lpl_sharing.jpg" alt="lpl sharing" style="width: 30%;"/>
