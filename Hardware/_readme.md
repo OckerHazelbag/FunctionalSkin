@@ -10,14 +10,14 @@ This folder describes how the FunctionalSkin prototype was built: a 120 × 60 cm
 |-------------|-------------|--------|----------|
 | Plywood sheets, 5.5 mm thick, 65 × 34 cm (6 tiles per sheet, indoor grade) | Lightply | 6 (to verify, 32 tiles needed) | Hornbach |
 | Spruce battens, rough, 22 × 48 × 2100 mm | KONSTA Vuren panlat ruw | about 6 (estimate: 5 × 120 cm + 9 × 60 cm) | Hornbach |
-| Polyurethane construction adhesive (EN 204 class D4) | Bison Konstruktielijm | 1 | [fill in] |
-| Waterproof wood glue (EN 204 class D3) | Pattex | 1 | [fill in] |
-| Nails, 35 mm (backboard) | [fill in] | 1 box | [fill in] |
-| Nails, 15 mm (tiles, slats) | [fill in] | 1 box | [fill in] |
-| White acrylic sealant (for seams) | Kelfort acrylkit anti-crack | 1 | [fill in] |
-| Radiative cooling paint | CryoPaint® | [fill in] | Cryo X |
+| Polyurethane construction adhesive (EN 204 class D4) | Bison Konstruktielijm | 1 | - |
+| Waterproof wood glue (EN 204 class D3) | Pattex | 1 | - |
+| Nails, 35 mm (backboard) | - | 1 box | - |
+| Nails, 15 mm (tiles, slats) | - | 1 box | - |
+| White acrylic sealant (for seams) | Kelfort acrylkit anti-crack | 1 | - |
+| Radiative cooling paint | CryoPaint® | 1 gallon | Cryo X |
 | PLA filament (assembly jig) | [fill in] | [fill in] | [fill in] |
-| Aluminium for the mould and 3D inserts (mycelium prototype) | [fill in] | [fill in] | [fill in] |
+| Aluminium for the mould and 3D inserts (mycelium prototype) | - | 10 x 10 x 10 cm of raw material | - |
 
 ## Fabrication methods and tools
 
